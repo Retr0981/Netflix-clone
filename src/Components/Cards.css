@@ -1,0 +1,125 @@
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.card-header {
+  border-top: 8px solid rgba(69 69 69);
+  padding: 50px;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  z-index: 1;
+}
+
+.card-img {
+  position: relative;
+  z-index: 0;
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+}
+
+.downloads {
+  border: 2px solid rgba(69 69 69);
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 100000;
+}
+
+.downloads img {
+  width: 50px;
+}
+
+.downloads-desc h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.downloads-desc h6 {
+  color: blue;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.img-plus-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-text {
+  margin-top: 5rem;
+}
+
+.card-content h1 {
+  font-size: 3rem;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+.card-content p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-content {
+    display: block;
+  }
+
+  .card-content h1 {
+    font-size: 2rem;
+  }
+
+  .card-content p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-text {
+    margin-top: 3rem;
+  }
+
+  .card-content h1 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .img-plus-video video {
+    width: 100%;
+  }
+
+  .downloads {
+    padding: 0.2rem;
+  }
+
+  .downloads-desc h4 {
+    font-size: 0.8rem;
+  }
+}

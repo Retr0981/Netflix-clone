@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Banner-container {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  position: relative;
+  object-fit: contain;
+}
+
+.Banner-container::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 15vh;
+  position: fixed;
+  transition: all 0.5s ease-in;
+  z-index: 100;
+}
+
+.nav_black {
+  width: 100%;
+  background-color: #000;
+}
+
+.navBar img {
+  cursor: pointer;
+}
+
+.navBar .logo img {
+  width: 100px;
+}
+
+.navBar .avarta img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+}
+
+.Banner_contents {
+  width: 100%;
+  height: 400px;
+  margin-left: 30px;
+  padding-top: 150px;
+  z-index: 1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.Banner_title {
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.Banner_button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  margin-right: 2rem;
+  border-radius: 0.2vw;
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.Banner_button:hover {
+  transition: all 0.2s;
+  color: #000;
+  background-color: #e6e6e6;
+}
+
+.Banner_description {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  width: 40rem;
+}
+.avarta {
+  position: relative;
+}
+
+.logout-btn {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  margin-right: 2rem;
+  border-radius: 0.2vw;
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.Banner-fadeBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30vh;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+@media screen and (max-width: 500px) {
+  .Banner_contents {
+    margin-left: 15px;
+    padding-top: 130px;
+  }
+  .Banner_title {
+    font-size: 1.5rem;
+  }
+
+  .Banner_button {
+    margin-right: 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .Banner_description {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}

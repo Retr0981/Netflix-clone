@@ -1,0 +1,17 @@
+   <div className = "row_posters"> {
+            movies.map((movie) => ( 
+
+            
+                    <img className = {
+                        `row_poster ${isLargeRow && "row_posterLarge"}`
+                    }
+                    key={movie.id}
+                    src = {
+                        `${base_Url}${isLargeRow ? movie.posters_path : movie.backdrop_path}`
+                    }
+                    alt = "{movie.name}"
+                    srcset = "" />
+
+            ))
+        } 
+        </div>
